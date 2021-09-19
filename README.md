@@ -1,2 +1,2 @@
 # retention_curve_chart
-Laravel cohort analysis for a website's on boarding flow
+Developed an API to retrive the data of cohort analysis, using Laravel 7.4

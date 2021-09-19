@@ -1,5 +1,5 @@
 <?php
-
+//returns week start date (Monday)
 function get_week_start_date($date){
     $timestamp=strtotime($date);
     if (!$timestamp) return false;
@@ -8,9 +8,9 @@ function get_week_start_date($date){
     return date('Y-m-d',$timestamp-$secondsPerDay*$dayOfWeek);
 
 }
-
+//returns vuejs chart line chart metrix
 function retention_chart_metrix($chartData,$options=[]){
-    if (!isset($chartData)) return false;
+    if (empty($chartData)) return false;
     $chartMetrix=[];
     foreach ($chartData as $dateKey=>$steps){
         if (!is_array($steps)) continue;
@@ -32,12 +32,11 @@ function retention_chart_metrix($chartData,$options=[]){
         
     }
     
-    
-
     return $chartMetrix;
 
 }
 
+//returns vuejs chart line chart options
 function get_chart_options($options){
 
     return [
@@ -76,4 +75,18 @@ function get_chart_options($options){
        
     ];
 
+}
+//validate csv file record
+function is_valid_record($item,$rules){
+    if (empty($rules) || empty($item)) return false;
+    $status=true;
+    foreach ($rules as $field=>$ru){
+
+        if ((!empty($ru['required']) && $ru['required']===true &&  empty($item[$field]))
+         || (!empty($ru['numeric']) && $ru['numeric']===true &&  !is_numeric($item[$field]))
+         || (!empty($ru['date']) && $ru['date']===true &&  strtotime($item[$field])>0) ) $status=false;
+
+
+    }
+    return $status;
 }

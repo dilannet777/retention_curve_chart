@@ -12,9 +12,16 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function test_basic_test()
     {
         $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_show_onboard_chart()
+    {
+        $response = $this->get('/api/chart/onboard');
 
         $response->assertStatus(200);
     }

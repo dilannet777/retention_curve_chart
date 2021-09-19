@@ -21,7 +21,7 @@ function retention_chart_metrix($chartData,$options=[]){
         $weekMetrix['pointBorderColor']=$randomColor;
         $weekMetrix['pointBackgroundColor']=!empty($options['point_background_color'])?$options['point_background_color']:'white';
         $weekMetrix['borderWidth'] = !empty($options['point_background_color'])?$options['border_width']:1;
-        $weekMetrix['fill'] = $options['fill']?$options['fill']:false;
+        $weekMetrix['fill'] = !empty($options['fill'])?$options['fill']:false;
         $maxOnboards=max(array_values($steps));
         if ($maxOnboards<=0)  continue;
         foreach ($steps as $step){

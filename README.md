@@ -33,6 +33,6 @@ php artisan test
 
 Demo : [Click Here](https://codeapi1.codesands.com/api/chart/onboard)
 
-### Front-end code of presenting data on retention curve chart
+### Front-end Code
 
 GitHub URL : [Click Here](https://github.com/dilannet777/retention_curve_chart_vuejs_app)

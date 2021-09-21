@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/chart/onboard', 'ChartController@getOnboardingFlowChart')->name('chart.onboard');
+Route::get('/chart/onboard', 'RetentionChartController@getRetentionChartData')->name('chart.onboard');
 
 
 

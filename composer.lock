@@ -4962,10 +4962,8 @@
             "autoload": {
                 "psr-4": {
                     "Facade\\FlareClient\\": "src"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
+                }
+                
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5042,10 +5040,8 @@
             "autoload": {
                 "psr-4": {
                     "Facade\\Ignition\\": "src"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
+                }
+        
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
